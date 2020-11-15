@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PunchClock Admin Panel</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js" type="application/javascript"></script>
+</head>
+<body>
+
+<h2>Create an Entry</h2>
+<form id="CreateEntryForm">
+    <label for="checkIn">Check in</label>
+    <input type="date" name="checkInDate" id="checkIn" required>
+    <input type="time" name="checkInTime" required>
+    <label for="checkOut">Check out</label>
+    <input type="date" name="checkOutDate" id="checkOut" required>
+    <input type="time" name="checkOutTime" required>
+    <input type="submit" value="Create Entry" />
+</form>
+
+<br>
+<h2>Modify an Entry</h2>
+<form id="ModifyEntryForm">
+    <label for="IdToModifyEntry">ID: </label>
+    <input type="text" name="IdToModifyEntry" id="IdToModifyEntry" required>
+    <label for="checkIn">Check in</label>
+    <input type="date" name="checkInDate" id="checkIn" required>
+    <input type="time" name="checkInTime" required>
+    <label for="checkOut">Check out</label>
+    <input type="date" name="checkOutDate" id="checkOut" required>
+    <input type="time" name="checkOutTime" required>
+    <input type="submit" value="Modify Entry" />
+</form>
+<br>
+
+<br>
+<h2>Delete an Entry</h2>
+<form id="DeleteEntryForm">
+    <label for="IdToDeleteEntry">ID to Delete: </label>
+    <input type="text" name="IdToDeleteEntry" id="IdToDeleteEntry" required>
+    <input type="submit" value="Delete Entry" />
+</form>
+<br>
+
+<h2>Create a User/Admin</h2>
+<form id="CreateUserForm">
+    <label for="username">Username: </label>
+    <input type="text" name="username" id="username" required>
+    <label for="password">Password: </label>
+    <input type="password" name="password" id="password" required>
+    <label for="role">Role: </label>
+    <input type="text" name="role" id="role" required>
+    <input type="submit" value="Create User/Admin" />
+</form>
+<br>
+<h2>Modify a User/Admin</h2>
+<form id="ModifyUserForm">
+    <label for="username">Username: </label>
+    <input type="text" name="username" id="username" required>
+    <label for="password">Password: </label>
+    <input type="password" name="password" id="password" required>
+    <label for="role">Role: </label>
+    <input type="text" name="role" id="role" required>
+    <input type="submit" value="Modify User/Admin" />
+</form>
+<br>
+<h2>Delete a User/Admin</h2>
+<form id="DeleteUserForm">
+    <label for="username">Username: </label>
+    <input type="text" name="username" id="username" required>
+    <label for="password">Password: </label>
+    <input type="password" name="password" id="password" required>
+    <label for="role">Role: </label>
+    <input type="text" name="role" id="role" required>
+    <input type="submit" value="Delete User/Admin" />
+</form>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Check in</th>
+        <th>Check out</th>
+    </tr>
+    </thead>
+    <tbody id="entryDisplay">
+    <tr>
+        <td colspan="3">Loading...</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
